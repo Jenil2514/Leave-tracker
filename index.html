@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leave Tracker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Password Modal -->
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <h2>Password Required</h2>
+      <input type="password" id="passwordInput" placeholder="Enter password">
+      <button onclick="checkPassword()">Submit</button>
+    </div>
+  </div>
+  
+  <h1>Leave Tracker</h1>
+  <div id="buttons">
+    <button onclick="addSubject()">Add Subject</button>
+    <button onclick="removeSubject()">Remove Subject</button>
+  </div>
+
+  <div id="subjects">
+    <!-- Existing subject elements will be dynamically added here -->
+  </div>
+
+  <div id="addModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAddModal()">&times;</span>
+      <h2>Add Subject</h2>
+      <form onsubmit="return submitSubject()">
+        <input type="text" id="subjectName" placeholder="Enter the name of the subject" required>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
